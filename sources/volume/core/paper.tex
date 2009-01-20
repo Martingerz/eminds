@@ -1,0 +1,438 @@
+\title{Instructions for the Preparation of Contributions to the e-Minds Journal}
+
+\setAuthor{Marcos González}
+\setAuthor{Martín González}
+\setAuthor{Jorge Manrubia}
+
+
+\setInstitute{
+The Human Communication and Interaction Research Group\\
+Department of Computer Science\\
+University of Oviedo\\
+33007, Oviedo, Spain\\
+\email{marcosgonzalezgallego@yahoo.es, martin@uniovi.es, jorgemanrubia@yahoo.es}%
+}
+
+\maketitle
+ 
+\begin{abstract}
+This document describes the formatting instructions for papers submitted to the \eminds\ journal, including the submission checklist that summarizes the files that must be included in the final submission. This paper also describes the organization of the \LaTeX\ templates required to prepare the contributions. The document includes several examples of the use of the basic commands required to insert headings, tables, figures, captions etc. Authors must strictly adhere to the norms included in this document in all the stages of the submission process: from the submission of the first draft of the contribution (prior to evaluation) up to the camera-ready version of the paper (once the paper has been accepted and the suggested fixes and improvements have been included).
+\end{abstract}
+
+\section{Introduction}
+
+Preparation of the manuscripts, which are to be reproduced by photo-offset, requires special care. This document describes our recommendations and norms, which were designed to ensure that each contribution submitted to our journal is as homogeneous as possible.
+
+Every paper submitted to \eminds\ must adhere the norms included in this document from the first submission (prior to the acceptance by the members of the Editorial Board) up to the final camera-ready version of the document. Papers submitted in a technically unsuitable form will be returned for retyping, or rejected if the volume cannot otherwise be finished on time. 
+
+As this document has been designed as an example of those norms and recommendations, we suggest to work on a copy of this paper, replacing its contents by the scientific material of the contribution.
+
+We urge you to read this entire documentation thoroughly, as it contains:
+
+\begin{itemize}
+	\item Semantic and syntactic rules that must be conformed when composing the paper.
+	\item Instructions of how to use the \eminds\ class document and \LaTeX\ samples.
+	\item List of documents that must be included in the paper submission.
+\end{itemize}  
+
+\section{The \eminds\ Template}
+
+Contributions to the \eminds\ journal must be written using \LaTeX. No other format will be accepted. If you are already a \LaTeX\ user, you won't experience major difficulties using the \eminds\ document class. In order to simplify the manuscript preparation, the design of the \eminds\ templates was based in the standard ``article'' class. Our goal was to introduce as few new commands as possible.
+
+It you are not already a \LaTeX\ user, we recommend \emph{The Not So Short Introduction to \LaTeX} \cite{lsshort} as an excellent guide for beginners and also as a reference for several useful topics. Two books are considered the reference for the \LaTeX\ typesetting system: \emph{\LaTeX: A Document Preparation System} \cite{latexLamport} by Leslie Lamport (the author of \LaTeX) and \emph{The \LaTeX\ Companion} \cite{latexCompanion}, which is considered the ``bible'' of \LaTeX.
+
+
+\subsection{\LaTeX\ files}
+
+The \LaTeX\ package required to prepare the contributions for \eminds\ is included in the 'Author's kit' zip file that can be downloaded from \url{www.hci.uniovi.es}. This package contains this guide, the \eminds\ document class file, and several additional pdf documents. The \eminds\ document class file \textbf{must not} be modified at all under any circumstance. If you find some missing important features in this class or you experience technical problems using it, please get in contact with us as soon as possible, but do not modify the class file. 
+
+The \eminds\ package includes the following files: 
+
+\medskip
+\begin{tabular}{@{} lp{8cm} @{}}
+\texttt{emindspaper.cls} & The \eminds\ \LaTeX\ document class file. You must use this class to write your contributions. \emph{This file must not be modified.}\\
+
+\texttt{paper-master.tex} & This is the root file of your paper.  It just defines a \eminds\ document and includes the next two files (\texttt{packages.tex} and \texttt{paper.tex}). This is the file that you must compile with your \LaTeX\ distribution in order to create your paper. \emph{This file must not be modified}. The \LaTeX\ source for this document is shown in listing \ref{listing:master.tex}.\\
+
+\texttt{paper-packages.tex} & This file contains the \LaTeX\ packages imported by your document. Authors can add their own %trasgu \lstinline!\usepackage{}! sentences here.\\
+
+\texttt{paper.tex} & Contains the paper itself. Authors must insert the content of their papers here.\\
+\end{tabular}
+
+\lstinputlisting[caption=\texttt{paper-master.tex}, label={listing:paper-master.tex}]{paper-master.tex}
+
+Authors should follow the next steps to write their contributions:
+\begin{enumerate}
+	\item Download the package containing the files from \url{www.hci.uniovi.es}.
+	\item Copy the contained files in the directory.
+	\item Start writing the content of the paper in the file \texttt{paper.tex}, if some \LaTeX\ package are required, they must be included in \texttt{packages.tex}.
+\end{enumerate}
+
+\subsection{Packages imported automatically}
+The \eminds\ document class imports several standard \LaTeX\ packages. They must be available in your distribution of \TeX\ in order to compile your \eminds\ paper. Most modern distributions of \TeX\ include these packages. They are also available on line from the CTAN netwok (\url{www.ctan.org}).
+\begin{itemize}
+	\item \texttt{anysize}. Required to modify the margins of the paper.
+	\item \texttt{inputenc}. Required to use different encoding options.
+	\item \texttt{fancyhdr}. Required to customize the paper's headers.
+	\item \texttt{ifthen}. Required to use \texttt{if-then} macros.
+	\item \texttt{graphicx}. Required to include figures.
+\end{itemize}
+
+
+
+\subsection{Compilation with pdf\LaTeX}
+\label{sec:pdflatex}
+Please compile your final document using pdf\LaTeX, obtaining your output file in PDF format instead of the DVI format. pdf\LaTeX works exactly the same as \LaTeX\ but replacing the \texttt{latex} command for \texttt{pdflatex}, so to create your document, you must invoke \texttt{pdflatex} as shown in this example:
+
+\begin{verbatim}
+pdflatex paper-master.tex
+\end{verbatim}
+
+
+\section{Manuscript Preparation}
+
+The printing area for \eminds\ documents included in our template is 122 mm. x 216 mm. The text is justified to occupy the full line width, so that the right margin is not ragged, with words hyphenated as appropriate. As the template is top-right aligned for odd pages and top-left aligned for even pages, there are plenty of blank space in the margins when printing in A4 page. Don't worry about it as at the final stages of the printing and binding process, the spare blank space will be cut out by the editors. You can see the final layout of the journal in the 'Instructions for printers' pdf document included in this kit.
+
+\subsection{The Title Section}
+The title section includes:
+\begin{itemize}
+	\item The title.
+	\item The list of Authors.
+	\item The affiliation of the author(s). 
+	\item The author(s) email addresses. 
+	\item The abstract.
+\end{itemize}
+
+The \eminds\ document class provides specific commands for this specific information.
+
+\subsubsection{Title}
+The title of the paper is provided using the \lstinline{\title} command.
+\begin{latexCommand}
+\title{The Title of the Paper}
+\end{latexCommand}
+
+The \lstinline{\title} command is shown below, as an example.
+
+\begin{latexCode}[caption={Specifying the title of the paper}]
+\title{Instructions for the Preparation of Contributions to the e-Minds Journal}
+\end{latexCode}
+
+\subsubsection{Author}
+The list of authors is specified using the \lstinline{\setauthor} command.
+
+\begin{latexCommand}
+\setAuthor[institute index]{name}
+\end{latexCommand}
+
+The attribute \lstinline{name} specifies the name (and surname) for \emph{only one} author. To provide information for several authors, please use one \lstinline{\setAuthor} command per author. For example:
+
+\begin{latexCode}[caption={Setting several authors}]
+\setAuthor{Marcos González}
+\setAuthor{Martín González}
+\setAuthor{Jorge Manrubia}
+\end{latexCode}
+
+The optional argument \lstinline{institute index} is used to indicate the relationships between authors and their institutes. If used, a reference number is printed next to the name of the author. The section (\ref{sec:institute}) includes an example of this command.
+
+\subsubsection{Institutions}
+\label{sec:institute}
+
+The institutions (universities, research groups, companies\ldots) where author(s) of the paper work(s) are specified using the \lstinline{\setInstitute} command.
+
+\begin{latexCommand}
+\setInstitute[institute index]{institute data}
+\end{latexCommand}
+
+The \lstinline{institute data} parameter contains data referred to a single institute. To include information about several institutes, use one \lstinline{\setInstitute} per entry.
+
+\begin{latexCode}[caption={Setting the institute}]
+\setInstitute{
+The Human Communication and Interaction Research Group\\
+Department of Computer Science\\
+University of Oviedo\\
+33007, Oviedo, Spain\\
+\email{marcosgonzalezgallego@yahoo.es, martin@uniovi.es, jorgemanrubia@yahoo.es}%
+}\end{latexCode}
+
+Just after the institute's address, the email address of every author working at the institute must be specified using the \lstinline{\email} command. If there are more than one email address, they must be separated by commas.
+
+The optional \lstinline{institute index} parameter is used to link an institute to a specific author. If used, a numeric reference to the author is printed automatically just before the institute entry. Obviously, the same reference number must be used in the two entries (author and institute) in order to properly link them to each other. Notice that the \lstinline{institute index} parameter is optional in both the \lstinline{\setAuthor} and \lstinline{\setInstitute} commands. It should not be used whenever the paper has only one author or all the authors belong to the same Institute. An example of use of the optional index is shown below:
+
+\begin{latexCode}[caption={Using optional index to link authors with their institutes}]
+\setAuthor[1]{Author A} %Belong to Institute A
+\setAuthor[2]{Author B} %Belong to Institute B
+
+\setInstitute[1]{Institute A}
+\setInstitute[2]{Institute B}
+\end{latexCode}
+
+\subsubsection{Abstract}
+The abstract section of the paper is created using the \lstinline{abstract} environment.
+
+\begin{latexCommand}
+\begin{abstract}
+	. . .
+\end{abstract}
+\end{latexCommand}
+
+The abstract is obligatory. It should summarize the contents of the paper and must contain between 70 and 150 words.
+
+\subsubsection{Putting it all together}
+The first section of the paper is dedicated to include the title of the paper, its authors and their institutes. The \lstinline{\maketitle} command must be invoked just afterwards in order to generate the title of the paper. Then, the abstract section must be included. This is how the title section of the paper must be specified. The next fragment of code shows the title section for this document. As all the authors belong to the \textit{Human Communication and Interaction Research Group}, no optional indexes are required.
+
+
+\begin{latexCode}[caption={Title section for this document}]
+\title{Instructions for the Preparation of Contributions to the e-Minds Journal}
+
+\setAuthor{Marcos González}
+\setAuthor{Martín González}
+\setAuthor{Jorge Manrubia}
+
+
+\setInstitute{
+The Human Communication and Interaction Research Group\\
+Department of Computer Science\\
+University of Oviedo\\
+33007, Oviedo, Spain%
+}
+\maketitle
+\end{latexCode}
+
+\subsection{Headings}
+Section's headings must be setup using \LaTeX\ standard commands: \lstinline{\section} \lstinline{\subsection}, \lstinline{\subsubsection} and \lstinline{\paragraph}. Notice that only four levels of headings are available as {\lstinline{\subparagraph} should not be used.
+
+\begin{latexCommand}
+\section{This is a First-Level Title}
+\subsection{This is a Second-Level Title}
+\paragraph{This is a Third-Level Title}
+\subparagraph{This is a Fourth-Level Title}
+\end{latexCommand}
+
+Headings should be capitalized (i.e, nouns, verbs, and all other words except articles, prepositions, and conjunctions). Words joined by a hyphen are subject to a special rule: if the first word can stand alone, the second word should be capitalized. Headings \textbf{must not} be punctuated at the end.
+
+\subsection{Figures}
+\label{sec:figures}
+The \lstinline{\includegraphics} command must be used to include images to your document. This command is defined in the package \texttt{graphicx}, which is automatically imported  by the \eminds\ class document \cite{lsshort}. Images must be centered in the document (see listing \ref{listing:eminds-logo} for an example).
+
+\begin{latexCommand}
+\includegraphics[key=value, . . . ]{file}
+\end{latexCommand}
+
+The \texttt{graphicx} package is used by the pdf\TeX\ driver to generate the final camera-ready copy of our journal. The graphic formats available for this driver are \texttt{png}, \texttt{pdf}, \texttt{jpg}, \texttt{mps} and \texttt{tif}, but \emph{not} \texttt{eps}. For this reason, the raster images used in your document must be designed using the highest resolution available. For instance, an image of 8x8 cm. must have a resolution of at least 150 dpi (dots per inch). 
+
+Each figure must be referenced in the text. Use the \lstinline{\ref} command for this. The images should be inserted just after the paragraph in which the figure is mentioned for first time. They will be numbered automatically by \LaTeX. Each figure must also include a caption. The last sentence of the caption should end without a period.
+
+As an example, the code used to include the figure \ref{fig:eminds-logo} is showed in listing \ref{listing:eminds-logo}.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{eminds-logo}
+	\end{center}
+	\caption{The \eminds\ logo}
+	\label{fig:eminds-logo}
+\end{figure}
+
+\begin{latexCode}[caption={An example of how to include a figure}, label={listing:eminds-logo}]
+As an example, the code used to include the figure \ref{fig:eminds-logo} is showed in listing \ref{listing:eminds-logo}.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{eminds-logo}
+	\end{center}
+	\caption{The \eminds\ logo}
+	\label{fig:eminds-logo}
+\end{figure}
+\end{latexCode}
+
+Notice that in the previous example the file extension of the image file (jpg) has not being specified. It is not necessary as the \lstinline{\includegraphics} command will look for supported formats in the working directory.
+
+\subsection{Formulas}
+The \lstinline{equation} environment must be used to include mathematical formulas. It will center the formula on a separate line and will assign it a reference number. Figures can be referenced from the text using the \lstinline{\label} command within the \lstinline{equation} environment or using the \lstinline{\ref} command in order to reference the label key. It is not obligatory to reference formulas in the text.
+
+The code used to compose the formula \ref{formula:limit-1} is showed in listing \ref{listing:limit-1} as an example.
+
+\begin{equation}
+\label{formula:limit-1}
+\lim_{x \rightarrow 0} \frac{\sin x}{x}=1
+\end{equation}
+
+\begin{latexCode}[caption={An example of how to include a mathematical formula}, label={listing:limit-1}]
+The \LaTeX\ code for the formula \ref{formula:limit-1} is showed in listing \ref{listing:limit-1} as an example.
+
+\begin{equation}
+\label{formula:limit-1}
+\lim_{x \rightarrow 0} \frac{\sin x}{x}=1
+\end{equation}
+\end{latexCode}
+
+To typeset mathematical content inline within a paragraph, the normal \LaTeX\ approaches can be used: between between \lstinline{\(} and \lstinline{\)}, between \lstinline{$} and \lstinline{$}, or using the \lstinline{math} environment.
+
+\subsection{Program code}
+
+To show pieces of program code there are two approaches:
+\begin{itemize}
+	\item Use the \lstinline{verbatim} environment which will output the contained text using a typewriter style without executing any \LaTeX\ command.
+	
+	\item Use a pretty printer \LaTeX\ package. The most powerful one is probably the \texttt{listings} package \cite{listingsHeinz}, which is used in this document to show fragments of \LaTeX\ code.
+\end{itemize}
+
+An example of how to use the \lstinline{verbatim} environment is shown below.
+
+\begin{latexCode}[caption={Using the \lstinline{verbatim} environment to show program code}]
+\begin{verbatim}
+for(i=0; i<100; i++){
+	System.out.println("Hello world "+i);
+}
+\end{verbatim}
+\end{latexCode}
+
+
+\subsection{Footnotes}
+Footnotes within the text should be included using the \lstinline{\footnote} command.
+
+\begin{latexCommand}
+\footnote{Text of the footnote.}
+\end{latexCommand}
+
+Footnotes should end with a period\footnote{Footnotes are numbered automatically.}.
+
+\begin{latexCode}[caption={An example of a footnote}]
+Footnotes should end with a period\footnote{Footnotes are numbered automatically.}.
+\end{latexCode}
+
+\subsection{Lists}
+Lists must be coded using the standard \LaTeX\ environments.
+\begin{itemize}
+	\item The \lstinline{itemize} environment for simple non-enumerated lists.
+	\item The \lstinline{enumerate} environment for enumerated lists.
+	\item The \lstinline{description} environment for lists of descriptions/definitions.
+\end{itemize}
+
+Each entry of the lists should end with a period.
+
+\subsection{Tables}
+Tables must be coded using the \LaTeX\ \lstinline{tabular} environment. Tables must be centered and it is recommended to use the \lstinline{table} environment in order to float them. When floated, it is obligatory to provide a caption for the table and a reference to the caption in the text. The last sentence of the caption should end without a period.
+
+As an example, the code used to create the table \ref{table:table-example} is shown in listing \ref{listing:table-example}. The format shown is only an example, authors are free to format their tables properly.
+
+\begin{latexCode}[caption={An example of how to compose a table}, label={listing:table-example}]
+\begin{table}
+	\begin{center}
+		\begin{tabular}{lll}
+			\hline
+			column 1 & column 2 & column 3 \\
+			\hline
+			data 1 1 & data 1 2 & data 1 3 \\
+			data 2 1 & data 2 2 & data 2 3 \\
+			data 3 1 & data 3 2 & data 3 3 \\
+			data 41 1 & data 4 2 & data 4 3 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{An example of a table.}
+	\label{table:table-example}
+\end{table}
+\end{latexCode}
+
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{lll}
+			\hline
+			column 1 & column 2 & column 3 \\
+			\hline
+			data 1 1 & data 1 2 & data 1 3 \\
+			data 2 1 & data 2 2 & data 2 3 \\
+			data 3 1 & data 3 2 & data 3 3 \\
+			data 41 1 & data 4 2 & data 4 3 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{An example of a table.}
+	\label{table:table-example}
+\end{table}
+
+
+\subsection{Special typefaces}
+Words are emphasized using the \lstinline{\emph} command. The use of specific fonts to emphasize content must be avoided in order to maintain the uniformity of contributions (the \lstinline{\emph} command will choose the right font depending on the context). 
+
+
+\subsection{Citations}
+The references section must be included at the end of your contribution, in front of the appendix, if one exists. This section is created using the \lstinline{thebibliography} environment (Please note that once rendered, the title for this section does not include any reference number).
+
+\begin{latexCommand}
+\begin{thebibliography}
+	. . .
+\end{thebibliography}
+\end{latexCommand}
+
+
+This section contains references to every citation included in the text. Each reference must be inserted in this section using the \lstinline{\bibitem} command. 
+
+\begin{latexCommand}
+\bibitem {reference index} reference data
+\end{latexCommand}
+
+The \textsl{reference index} is a unique code for each reference. You will require this code to include the citation in the text using the \lstinline{\cite} command which receives this code as its parameter.
+
+\begin{latexCommand}
+\cite {reference index} 
+\end{latexCommand}
+
+Each citation included in the text (\lstinline{\cite} command) must have a reference item (\lstinline{\bibitem}) in the \textsl{thebibliography} environment and vice versa, every reference must be cited in the text.
+
+The \textsl{reference data} in the \lstinline{\bibitem} command must include the complete bibliographic reference for the citation. The reference data must begin with the list of authors separated by commas and ended with a period. Next, the title of the reference must be included, followed by its year of publication. If the citation refers to a paper included in a book or journal, the name of the book must be included just after the year of publication. Next, information about the publishers and edition must be included, inserting the ISSN or ISBN next (if applicable). If you are citing an Internet report, the information about the publisher must be replaced by the text \textit{Available on line from} followed by the URL inserted using the \lstinline{\url} command. Each reference data must end with a period.
+
+As an example, the code used to include the references section for this paper is included in listing \ref{listing:references}.
+
+\begin{latexCode}[caption={Code for our references section}, label={listing:references}]
+
+\begin{thebibliography} {5}
+
+\bibitem{latexLamport} Leslie Lamport. \LaTeX: A Document Preparation System. 1994. Addison-Wesley, Reading, Massachusetts, second edition, ISBN 0-201-52983-1.
+
+\bibitem{latexCompanion} Michel Goossens, Frank Mittelbach and Alexander Samarin. 1994. The \LaTeX\ Companion. Addison-Wesley, Reading, Massachusetts, ISBN 0-201-54199-8.
+
+\bibitem{lsshort} Tobias Oetiker, Hubert Partl, Irene Hyna and Elisabeth Schlegl. 2004. The Not So Short Introduction to \LaTeX. Available on line from \url{www.ctan.org/tex-archive/info/lshort/english/lshort.pdf-}
+
+\bibitem{listingsHeinz} Carsten Heinz. The Listings Package. 2005. Available on line from  \url{http://www.atscire.de/index.php?nav=products/listings-}
+
+\bibitem{gonzalezReport} Marcos González, Jorge Manrubia. Remote Usability Techniques revisited. 2026. eMinds: International Journal on Human-Computer Interaction, Vol X, Issue 25, ISSN 1697-9613.
+
+\end{thebibliography}
+\end{latexCode}
+
+The \lstinline{\cite command must used in the text just after the citation. If the reference has one or two authors you must cite both of them. For example \textit{as reported by Heinz} \cite{listingsHeinz} or \textsl{as mentioned by Gonzalez and Manrubia} \cite {gonzalezReport}. If the paper has more than two authors you must cite the first author followed by \textsl{et al}. For example, \textit{as described by Oetiker et al} \cite{lsshort}. Listing \ref{listing:citations} shows the code used to set up this paragraph.  
+
+\begin{latexCode}[caption={Example of text citations}, label={listing:citations}]
+
+The \lstinline{\cite command must used in the text just after the citation. If the reference has one or two authors you must cite both of them. For example \textit{as reported by Heinz} \cite{listingsHeinz} or \textsl{as mentioned by Gonzalez and Manrubia} \cite {gonzalezReport}. If the paper has more than two authors you must cite the first author followed by \textsl{et al}. For example, \textit{as described by Oetiker et al} \cite{lsshort}. Listing \ref{listing:citations} shows the code used to set up this paragraph.  
+
+\end{thebibliography}\end{latexCode}
+
+\section{Submission}
+Submissions to \eminds\ must be performed in electronic format only, using a single zip file. Please refer to the submission instructions included in \url{www.hci.uniovi.es}.
+
+If you are submitting a camera-ready version of your contribution (your paper has been accepted for publication and the changes suggested by the members of the Editorial Board have been included in your manuscript) you \textbf{must} also submit us a signed copy of the 'e-Minds Copyright Form'. This form is included in this package and can be sent to us either by fax or by courier. You can obtain our contact address in \url{www.hci.uniovi.es}. 
+
+\subsection{Files to be included in your submission}
+When submitting your contribution to the volume editors, please make sure you include the following documents in the submission zip file:
+\begin{itemize}
+	\item The source (input) files: \texttt{packages.tex} and \texttt{paper.tex}.
+	\item The files containing the images or figures included in the paper.
+	\item The final PDF  version of you contribution.
+\end{itemize}
+
+\begin{thebibliography} {5}
+
+\bibitem{latexLamport} Leslie Lamport. \LaTeX: A Document Preparation System. 1994. Addison-Wesley, Reading, Massachusetts, second edition, ISBN 0-201-52983-1.
+
+\bibitem{latexCompanion} Michel Goossens, Frank Mittelbach and Alexander Samarin. 1994. The \LaTeX\ Companion. Addison-Wesley, Reading, Massachusetts, ISBN 0-201-54199-8.
+
+\bibitem{lsshort} Tobias Oetiker, Hubert Partl, Irene Hyna and Elisabeth Schlegl. 2004. The Not So Short Introduction to \LaTeX. Available on line from \url{www.ctan.org/tex-archive/info/lshort/english/lshort.pdf-}
+
+\bibitem{listingsHeinz} Carsten Heinz. The Listings Package. 2005. Available on line from  \url{http://www.atscire.de/index.php?nav=products/listings-}
+
+\bibitem{gonzalezReport} Marcos González, Jorge Manrubia. Remote Usability Techniques revisited. 2026. eMinds: International Journal on Human-Computer Interaction, Vol X, Issue 25, ISSN 1697-9613.
+
+\end{thebibliography}
+
