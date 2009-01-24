@@ -5,7 +5,7 @@ require "lib/EmindsDataFile"
 SOURCES_PATH = "sources"
 BUILD_PATH = "build"
 OUTPUT_PATH = "output"
-
+   
 VOLUME = "volume"
 VOLUME_CORE = File.join(VOLUME, 'core', '.')
 VOLUME_SPECIFIC = File.join('volume', 'specific', '.')
