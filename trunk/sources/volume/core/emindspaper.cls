@@ -3,7 +3,7 @@
 \ProvidesClass{emindspaper}[2005/03/17 Eminds paper class]
 %------------------------------------------------------------------------------------
 \LoadClass[onecolumn,twoside,a4paper,10pt]{article}
-
+   
 %------------------------------------------------------------------------------------
 \RequirePackage{anysize} % To use the command \marginsize
 \RequirePackage[latin1]{inputenc} %To show spanish characters
