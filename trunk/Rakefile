@@ -16,7 +16,7 @@ CLOBBER.include(OUTPUT_PATH)
 FILE_OPTIONS = {:preserve=>true, :verbose=>true}
 
 def at_build(path)
-  File.join("#{BUILD_PATH}", path)
+  File.join("#{BUILD_PATH}", path) 
 end
 
 def at_sources(path)
