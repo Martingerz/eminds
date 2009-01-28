@@ -70,9 +70,10 @@
 \refstepcounter{part}  
 
 %For the entries of the kind title/content in the volume primer
-\newcommand{\volumeEntry}[2]{
+\newcommand{\volumeEntry}[2]{%
 \noindent \textbf{#1} \\
-{#2}\bigskip \\
+{#2}\\
+\vspace{5mm}%
 }
 \newcommand{\volumeEntryNoSkip}[2]{
 \noindent \textbf{#1} \\
@@ -118,7 +119,7 @@
 \newcommand{\insertEvenAdvert}[1]{%
 \includepdf[fitpaper=false, trim=4cm -1.1cm 3cm -1.1cm]{#1}}
 
-
+\newcommand{\emindSubtitle}[1]{\noindent\textbf{{\Large{#1}}}\vspace*{5mm}}
 
 \newcommand{\insertAdvert}[1]{%Ojo al par/impar: es al contrario porque includepdf genera nueva página
 \ifthenelse{\isodd\thepage}%
@@ -134,9 +135,6 @@
 
 \newcommand{\inputPaper}[2][]{
 \cleardoublepage
-
-\graphicspath{{#2/}}
-
 \renewcommand{\paperAuthor}{}%
 \renewcommand{\authorString}{}%
 \renewcommand{\instituteString}{}%
@@ -144,13 +142,12 @@
 \renewcommand{\firstAuthor}{}%
 \renewcommand{\headerAuthorString}{\paperAuthor}
 
+\graphicspath{{#2/}}
 \input{#2/paper}
 
 \ifthenelse{\equal{#1}{}}% Publicidad al final, es opcional
 {}%
 {\insertAdvert{#1}}
-
-
 
 }
 
