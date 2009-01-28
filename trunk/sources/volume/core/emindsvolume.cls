@@ -77,6 +77,11 @@
 }
 \newcommand{\volumeEntryNoSkip}[2]{
 \noindent \textbf{#1} \\
+{#2}\bigskip \\
+}
+
+\newcommand{\volumeEntryNoSkipM}[2]{
+\noindent \textbf{#1} \\
 {#2}\\
 }
 
