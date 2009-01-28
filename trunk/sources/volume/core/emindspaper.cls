@@ -3,7 +3,7 @@
 \ProvidesClass{emindspaper}[2005/03/17 Eminds paper class]
 %------------------------------------------------------------------------------------
 \LoadClass[onecolumn,twoside,a4paper,10pt]{article}
-   
+
 %------------------------------------------------------------------------------------
 \RequirePackage{anysize} % To use the command \marginsize
 \RequirePackage[latin1]{inputenc} %To show spanish characters
@@ -12,16 +12,17 @@
 \RequirePackage[pdftex]{color,graphicx}
 
 %Comment this line for A4 paper size (uncommented for LULU)
-%\RequirePackage[papersize={156mm,234mm}]{geometry}
+\RequirePackage[papersize={156mm,234mm}]{geometry}
 
 %\RequirePackage[pdftex]{hyperref}
+
 
 %------------------------------------------------------------------------------------
 
 %Margins
 %{/margen_izq/}{/margen_dch/}{/margen_sup/}{/margen_inf/}
 % \marginsize{7.60cm}{1.20cm}{1.2cm}{6.90cm}
-%Le quito 6 mm a la cabecera seg�n recomendaci�n de mart�n
+%Le quito 6 mm a la cabecera según recomendación de martín
 \marginsize{3.3cm}{1.1cm}{0.5cm}{1.1cm}%El inferior era 1.1cm
 
 %Abstract section
@@ -276,7 +277,7 @@
 
 	%Para la primera pagina de los papers
 	 \fancypagestyle{plain}{
-		% \fancyfoot[OC]{\footnotesize \firsPagePaperReference}
+		\fancyfoot[OC]{\footnotesize \firsPagePaperReference}
 		\fancyfoot[OR]{}
 		\fancyfoot[OL]{}
 		\fancyhead{}
@@ -292,7 +293,7 @@
 \newcommand{\abbreviatedHeader}{false}
 \newcommand{\setAbbreviatedHeader}[1]{\renewcommand{\abbreviatedHeader}{#1}}
 \newcommand{\headerAuthorString}{\paperAuthor}
-% \newcommand{\firsPagePaperReference}{\paperAuthor\ ``\paperTitle'' Vol. \emindsVolumeCount\ No. \emindsVolumeNumber\ (\emindsVolumeDate). ISSN: \emindsISSNprinted\ (print) - \emindsISSNonline\ (online). \texttt{\emindsHomePage}}
+\newcommand{\firsPagePaperReference}{\paperAuthor\ ``\paperTitle'' Vol. \emindsVolumeCount\ No. \emindsVolumeNumber\ (\emindsVolumeDate). ISSN: \emindsISSNprinted\ (print) - \emindsISSNonline\ (online). \texttt{\emindsHomePage}}
 
 \newcommand{\headerAuthorCommand}{%
 \ifthenelse{\equal {\abbreviatedHeader}{true}}%
@@ -300,7 +301,7 @@
 {\headerAuthorString}}%
 
 \fancyhf{}
-% Arriba:  T�tulo  del  paper  (impares)  y autores (pares) en negrita y
+% Arriba:  Título  del  paper  (impares)  y autores (pares) en negrita y
 % alineado al exterior.
 \setlength{\headheight}{23pt}
 %\setlength{\footskip}{0.5cm} %Pruebas con margen inferior menor
