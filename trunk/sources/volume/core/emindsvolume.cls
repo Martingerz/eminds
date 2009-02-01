@@ -2,6 +2,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{emindsvolume}[2005/03/24 Eminds volume class]
 %------------------------------------------------------------------------------------
+\newcommand{\thisIsAeMindsVolume}{}
+
 \LoadClass{emindspaper}
 
 %------------------------------------------------------------------------------------

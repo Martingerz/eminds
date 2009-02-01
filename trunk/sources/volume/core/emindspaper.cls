@@ -293,7 +293,18 @@
 \newcommand{\abbreviatedHeader}{false}
 \newcommand{\setAbbreviatedHeader}[1]{\renewcommand{\abbreviatedHeader}{#1}}
 \newcommand{\headerAuthorString}{\paperAuthor}
+
+
+
+%The special first page signature is only showed in the volume compilation
+\ifdefined\thisIsAeMindsVolume
 \newcommand{\firsPagePaperReference}{\paperAuthor\ ``\paperTitle'' Vol. \emindsVolumeCount\ No. \emindsVolumeNumber\ (\emindsVolumeDate). ISSN: \emindsISSNprinted\ (print) - \emindsISSNonline\ (online). \texttt{\emindsHomePage}}
+\else
+\newcommand{\firsPagePaperReference}{}
+\fi
+
+
+
 
 \newcommand{\headerAuthorCommand}{%
 \ifthenelse{\equal {\abbreviatedHeader}{true}}%
