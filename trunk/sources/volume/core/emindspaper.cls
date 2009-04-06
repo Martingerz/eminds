@@ -325,6 +325,30 @@
 \pagestyle{fancy}
 
 
+%---------------------------------------------------------------------------
+\newenvironment{aboutauthors}
+{
+\newpage
+\section*{About the Authors}
+\label{sec:abouttheauthors}
+\begin{aboutauthors*}
+}
+{
+\end{aboutauthors*}
+}
+
+\newenvironment{aboutauthors*}
+{
+\begin{tabular}{m{0.2\linewidth}m{0.6\linewidth}}
+}
+{
+\end{tabular}
+}
+
+\newcommand{\authorentry}[3]{
+\multicolumn{2}{>{\columncolor[rgb]{0,0,0}}c}{\color{white}\textbf{\large #2 }} \\
+\includegraphics[width=1\linewidth]{#1} & \bigskip #3 \\[1cm]
+}
 
 
 %------------------------------------------------------------------------------------
