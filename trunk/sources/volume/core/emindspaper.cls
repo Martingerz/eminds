@@ -346,8 +346,8 @@
 }
 
 \newcommand{\authorentry}[3]{
-\multicolumn{2}{>{\columncolor[rgb]{0,0,0}}c}{\color{white}\textbf{\large #2 }} \\
-\includegraphics[width=1\linewidth]{#1} & \bigskip #3 \\[1cm]
+%\multicolumn{2}{>{\columncolor[rgb]{0,0,0}}c}{\color{white}\textbf{\large #2 }} \\
+\includegraphics[width=1\linewidth]{#1} & \small\textbf{#2.} #3 \\[1cm]
 }
 
 

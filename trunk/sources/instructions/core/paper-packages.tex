@@ -1,0 +1,17 @@
+\usepackage{url}
+\usepackage{listings}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{color}
+%------------------------------------------------------------------------------------
+
+\lstset{basicstyle=\small, identifierstyle=\ttfamily, commentstyle=\ttfamily\itshape, keywordstyle=\sffamily\color{blue}, emphstyle=\ttfamily\color{blue}\underbar, numbers=none, numberstyle=\tiny, tabsize=2, extendedchars=true, frame=tb, framerule=0.4pt, framexleftmargin=5mm, xleftmargin=10mm, xrightmargin=5mm, breaklines=true, breakautoindent=true, columns=fullflexible, language=[LaTeX]TeX, morekeywords={\setAuthor, \setInstitute, \maketitle, \url, \email, \maketitle, \section, \subsection, \subsubsection, \paragraph, \subparagraph, \title, \includegraphics, \ref, \caption, \authorentry}}
+
+\lstnewenvironment{latexCode}[1][]{
+\lstset{#1}}
+{}
+
+\lstnewenvironment{latexCommand}[1][]{
+\lstset{frame=single, numbers=none, xleftmargin=20mm, xrightmargin=20mm, #1}}
+{}
+
