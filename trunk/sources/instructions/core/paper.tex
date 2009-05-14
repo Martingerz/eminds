@@ -1,6 +1,6 @@
 \title{Instructions for the Preparation of e-Minds Contributions}
 
-\setAuthor{Martín González}
+\setAuthor{Martin Gonzalez-Rodriguez}
 \setAuthor{Jorge Manrubia}
 
 \setInstitute{
@@ -8,7 +8,7 @@ The Human Communication and Interaction Research Group\\
 Department of Computer Science\\
 University of Oviedo\\
 33007, Oviedo, Spain\\
-\email{fideldd}{yahoo.es}, \email{martin}{uniovi.es}, \email{jorge.manrubia}{gmail.com}
+\email{martin}{uniovi.es}, \email{jorge.manrubia}{gmail.com}
 }
 
 \maketitle
@@ -139,8 +139,7 @@ The list of authors is specified using the \lstinline{\setauthor} command.
 The attribute \lstinline{name} specifies the first and last name for \emph{only one} author. To provide information for several authors, please use one \lstinline{\setAuthor} command per author. For example:
 
 \begin{latexCode}[caption={Setting several authors}]
-\setAuthor{Fidel Díez}
-\setAuthor{Martín González}
+\setAuthor{Martin Gonzalez-Rodriguez}
 \setAuthor{Jorge Manrubia}
 \end{latexCode}
 
@@ -186,7 +185,7 @@ The Human Communication and Interaction Research Group\\
 Department of Computer Science\\
 University of Oviedo\\
 33007, Oviedo, Spain\\
-\email{fideldd}{yahoo.es}, \email{martin}{uniovi.es}, \email{jorge.manrubia}{gmail.com}
+\email{martin}{uniovi.es}, \email{jorge.manrubia}{gmail.com}
 }
 
 \end{latexCode}
@@ -203,10 +202,10 @@ The \lstinline{\email} command receives two arguments: the name of the email add
 \email{myaddress}{mydomain.com}
 \end{latexCode}
 
-If there are more than one email address, they must be separated by commas. If you want to aggregate two or more addresses with the same domain, separate the names with comas inside the first argument of the \lstinline{\email} command and surround them with brackets (you must use \LaTeX\ escape characters: \lstinline!\{! and \lstinline!\}!). For example, \texttt{\{fidel, martin, jorge\}@hci-rg.es} would be specified as:
+If there are more than one email address, they must be separated by commas. If you want to aggregate two or more addresses with the same domain, separate the names with comas inside the first argument of the \lstinline{\email} command and surround them with brackets (you must use \LaTeX\ escape characters: \lstinline!\{! and \lstinline!\}!). For example, \texttt{\{martin, jorge\}@hci-rg.es} would be specified as:
 
 \begin{latexCode}
-\email{\{fidel, martin, jorge\}}{hci-rg.es}
+\email{\{martin, jorge\}}{hci-rg.es}
 \end{latexCode}
 
 The optional \lstinline{institute index} parameter is used to link an institute to a specific author. If used, a numeric reference to the author is printed automatically just before the institute entry. Obviously, the same reference number must be used in the two entries (author and institute) in order to properly link them to each other. Notice that the \lstinline{institute index} parameter is optional in both the \lstinline{\setAuthor} and \lstinline{\setInstitute} commands. It should not be used whenever the paper has only one author or when all the authors belong to the same institute. An example of use of the optional index is shown below:
@@ -237,8 +236,7 @@ The first section of the paper is dedicated to include the title of the paper, i
 \begin{latexCode}[caption={Title section for this document}]
 \title{Instructions for the Preparation of e-Minds Contributions}
 
-\setAuthor{Fidel Díez}
-\setAuthor{Martín González}
+\setAuthor{Martin Gonzalez-Rodriguez}
 \setAuthor{Jorge Manrubia}
 
 \setInstitute{
@@ -464,7 +462,7 @@ The \lstinline{\cite} command must used in the text just after the citation. If 
 
 \begin{latexCode}[caption={Example of text citations}, label={listing:citations}]
 
-The \lstinline{\cite} command must used in the text just after the citation. If the reference has one or two authors you must cite both of them. For example `as reported by Heinz \cite{listingsHeinz}' or `as mentioned by Gonzalez and Manrubia \cite {gonzalezReport}'. If the paper has more than two authors you must cite the first author followed by 'et al'. For example, `as described by Oetiker et al \cite{lsshort}'. Listing \ref{listing:citations} shows the code used to set up this paragraph.  
+The \lstinline{\cite} command must used in the text just after the citation. If the reference has one or two authors you must cite both of them. For example `as reported by Heinz \cite{listingsHeinz}' or `as mentioned by Gonzalez- and Manrubia \cite {gonzalezReport}'. If the paper has more than two authors you must cite the first author followed by 'et al'. For example, `as described by Oetiker et al \cite{lsshort}'. Listing \ref{listing:citations} shows the code used to set up this paragraph.  
 
 \end{latexCode}
 
@@ -487,7 +485,7 @@ Using the \lstinline{aboutauthors} environment will create a new unnumbered sect
 If you need multiple pages for this section, please prepare each page with independent environments\footnote{\LaTeX\ \lstinline{tabular} environment is used internally and this environment can't break tables automatically}:
 
 \begin{itemize}
-	\item For the first page use the already commented \lstinline{aboutauthors}
+	\item For the first page use the already commented \lstinline{aboutauthors}.
 	\item For the following pages use \lstinline{aboutauthors*} (this environment won't insert a title in the page where it's invoked). You may want to use the \lstinline{newpage} latex command if you want to force clean page breaks between entries.
 \end{itemize}
 
@@ -497,7 +495,7 @@ An example of a complete biographical section is shown in listing \ref{listing:b
 \begin{latexCode}[caption={An example of how to create a section with the biographies of the authors}, label={listing:biography-example}]
 	
 \begin{aboutauthors}
-\authorentry{Images/martin}{Martin Gonzalez Rodriguez}{
+\authorentry{Images/martin}{Martin Gonzalez-Rodriguez}{
 Former photographer and graphic designer, he works as associated professor for the Department of Computer Science of the University of Oviedo since 1996, being the Head of the Human Communication and Interaction Reseach Group since 2001.\newline\newline
 
 Founder of the ICWE (International Conference on Web Engineering) (2001) eMinds: International Journal on Human-Computer Interaction (2002), he is member of the editorial board of many other international refereed research forums, including IEEE Multimedia, IEEE Software and IJWET (International Journal on Web Engineering and Technology).
@@ -513,9 +511,11 @@ He is responsible of the e-Minds LaTeX Typesetting System and this text is just 
 \section{Submission}
 Submissions to \eminds\ must be done in electronic format only, including all the documents required in a single zip file that must be submitted from your account at \url{www.eminds.hci-rg.com}.
 
-If you are submitting a camera-ready version of your contribution (your paper has been accepted for publication and the changes suggested by the members of the Editorial Board have been included in your manuscript) you \emph{must} also submit us a signed copy of the `e-Minds Copyright Form' pdf document (accompanying this document in the `Latex template and Instructions for Authors' zip file).
+During the submission process you will ask to read and to accept the 'e-Minds Copyright Form' giving the journal the rights to reproduce your original work.
 
-This form can be sent to us either by fax or by courier. Our fax number is included in the footer of the copyright form an also in the `contact us' section of \url{www.hci-rg.com}. 
+%If you are submitting a camera-ready version of your contribution (your paper has been %accepted for publication and the changes suggested by the members of the Editorial Board have %been included in your manuscript) you \emph{must} also submit us a signed copy of the `e-Minds %Copyright Form' pdf document (accompanying this document in the `Latex template and %Instructions for Authors' zip file).
+%
+%This form can be sent to us either by fax or by courier. Our fax number is included in the %footer of the copyright form an also in the `contact us' section of \url{www.hci-rg.com}. 
 
 \subsection{Files to be Included in your Submission}
 When submitting your contribution to the volume editors, please make sure you include the following documents in the submission zip file:
@@ -540,7 +540,7 @@ When submitting your contribution to the volume editors, please make sure you in
 \end{thebibliography}
 
 \begin{aboutauthors}
-\authorentry{Images/martin}{Martin Gonzalez Rodriguez}{
+\authorentry{Images/martin}{Martin Gonzalez-Rodriguez}{
 Former photographer and graphic designer, he works as associated professor for the Department of Computer Science of the University of Oviedo since 1996, being the Head of the Human Communication and Interaction Reseach Group since 2001.\newline\newline
 Founder of the ICWE (International Conference on Web Engineering) (2001) eMinds: International Journal on Human-Computer Interaction (2002), he is member of the editorial board of many other international refereed research forums, including IEEE Multimedia, IEEE Software and IJWET (International Journal on Web Engineering and Technology).
 }
