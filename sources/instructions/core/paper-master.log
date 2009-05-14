@@ -1,39 +1,421 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.1.17)  6 APR 2009 22:15
+This is pdfTeX, Version 3.141592-1.40.4 (MiKTeX 2.7) (preloaded format=pdflatex 2009.5.13)  14 MAY 2009 15:09
 entering extended mode
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**paper-master.tex
-(./paper-master.tex
+**C:/MAGI*BALTHASAR/DATOS/Activo/Proyectos/2010*Proyecto*e-Minds/Volumenes/Crea
+ndo*Volumen...*[SVN]/sources/instructions/core/paper-master.tex
+
+("C:/MAGI BALTHASAR/DATOS/Activo/Proyectos/2010 Proyecto e-Minds/Volumenes/Crea
+ndo Volumen... [SVN]/sources/instructions/core/paper-master.tex"
 LaTeX2e <2005/12/01>
-Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
-yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
-abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
-h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
-greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
-tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
-omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
-sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+Babel <v3.8h> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, loaded.
+(emindspaper.cls
+Document Class: emindspaper 2005/03/17 Eminds paper class
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\article.cls"
+Document Class: article 2005/09/16 v1.4f Standard LaTeX document class
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\size10.clo"
+File: size10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\anysize\anysize.sty"
+Package: anysize 1994/08/13 setting margin sizes
 
-! LaTeX Error: File `emindspaper.cls' not found.
+document style option `anysize' loaded
+Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
+Version 1.0, Aug 13, 1994
+\@Leftmargin=\dimen103
+\@Rightmargin=\dimen104
+\@Topmargin=\dimen105
+\@Bottommargin=\dimen106
+) ("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\inputenc.sty"
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\latin1.def"
+File: latin1.def 2006/05/05 v1.1b Input encoding file
+))
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-Enter file name: 
-./paper-master.tex:2: Emergency stop.
-<read *> 
-         
-l.2 ^^M
-       
-*** (cannot \read from terminal in nonstop modes)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
 
- 
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\pdftex.def"
+File: pdftex.def 2007/06/12 v0.04h Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+)
+\Gin@req@height=\dimen107
+\Gin@req@width=\dimen108
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\geometry\geometry.sty"
+Package: geometry 2002/07/08 v3.2 Page Geometry
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen109
+\Gm@wd@mp=\dimen110
+\Gm@odd@mp=\dimen111
+\Gm@even@mp=\dimen112
+\Gm@dimlist=\toks17
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\geometry\geometry.cfg")))
+(paper-packages.tex
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\listings.sty"
+\lst@mode=\count91
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count92
+\lst@currlwidth=\dimen113
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen114
+\lst@width=\dimen115
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen116
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count97
+\lst@skipnumbers=\count98
+\lst@framebox=\box27
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\listings.cfg"
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\tools\array.sty"
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks19
+\extratabsurround=\skip52
+\backup@length=\skip53
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+\everycr=\toks20
+\minrowclearance=\skip54
+)
+LaTeX Info: Redefining \color on input line 702.
+\rownum=\count99
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2004/09/05 1.3 listings language file
+)
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+))
+(paper-master.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\context\base\supp-pdf.tex"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen119
+\scratchbox=\box28
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen120
+\MPnumerator=\count104
+\everyMPtoPDFconversion=\toks21
+)
+-------------------- Geometry parameters
+paper: user defined
+landscape: --
+twocolumn: --
+twoside: true
+asymmetric: --
+h-parts: 53.2641pt, 0.7\paperwidth , 79.89616pt (default)
+v-parts: 79.89615pt, 0.7\paperheight , 119.84424pt (default)
+hmarginratio: 2:3
+vmarginratio: 2:3
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: pdftex
+-------------------- Page layout dimensions and switches
+\paperwidth  443.86299pt
+\paperheight 665.79448pt
+\textwidth  318.67061pt
+\textheight 553.26991pt
+\oddsidemargin  21.62419pt
+\evensidemargin -40.97179pt
+\topmargin  -58.04362pt
+\headheight 23.0pt
+\headsep    25.0pt
+\footskip   30.0pt
+\marginparwidth 111.0pt
+\marginparsep   11.0pt
+\columnsep  10.0pt
+\skip\footins  9.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+\@twosidetrue \@mparswitchtrue 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+\c@lstlisting=\count105
+ (paper.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 17.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 32.
+ [1
+
+
+{C:/Documents and Settings/All Users.WINDOWS/Datos de programa/MiKTeX/2.7/pdfte
+x/config/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 43.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+
+Overfull \hbox (4.9507pt too wide) in paragraph at lines 52--61
+[][] 
+ []
+
+(paper-master.tex [2]) [3] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 205
+.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 205.
+
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 205.
+
+[6] [7] [8] <Images/eminds-logo.jpg, id=44, 1501.61pt x 526.96875pt>
+File: Images/eminds-logo.jpg Graphic file (type jpg)
+
+<use Images/eminds-logo.jpg> [9 <Images/eminds-logo.jpg>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 339.
+
+
+("C:\Archivos de programa\MiKTeX 2.7\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 339.
+ [10]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12]
+Overfull \hbox (5.61255pt too wide) in paragraph at lines 471--472
+\OT1/cmr/m/n/10 Authors can pro-vide a small bi-og-ra-phy of them-selves us-ing
+ the []
+ []
+
+[13] [14] [15] [16] <Images/martin.jpg, id=76, 130.4875pt x 150.5625pt>
+File: Images/martin.jpg Graphic file (type jpg)
+
+<use Images/martin.jpg>
+Underfull \hbox (badness 1983) in paragraph at lines 546--546
+\OT1/cmr/m/n/9 mu-ni-ca-tion and In-ter-ac-tion Re-seach Group
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--546
+
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 546--546
+\OT1/cmr/m/n/9 Founder of the ICWE (In-ter-na-tional Con-
+ []
+
+
+Underfull \hbox (badness 4156) in paragraph at lines 546--546
+\OT1/cmr/m/n/9 In-ter-na-tional Jour-nal on Human-Computer
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 546--546
+\OT1/cmr/m/n/9 board of many other in-ter-na-tional ref-er-eed
+ []
+
+
+Underfull \hbox (badness 3635) in paragraph at lines 546--546
+\OT1/cmr/m/n/9 IEEE Soft-ware and IJWET (In-ter-na-tional
+ []
+
+<Images/jorge.jpg, id=77, 150.5625pt x 207.77625pt>
+File: Images/jorge.jpg Graphic file (type jpg)
+ <use Images/jorge.jpg>
+Underfull \hbox (badness 1661) in paragraph at lines 551--551
+[]|\OT1/cmr/bx/n/9 Jorge Man-rubia.  \OT1/cmr/m/n/9 Soft-ware En-gi-neer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--551
+
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 551--551
+\OT1/cmr/m/n/9 He is re-spon-si-ble of the e-Minds La-TeX
+ []
+
+) [17 <Images/martin.jpg> <Images/jorge.jpg>] (paper-master.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 252 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 10 strings out of 493876
- 216 string characters out of 1150568
- 48901 words of memory out of 3000000
- 3382 multiletter control sequences out of 10000+50000
- 3640 words of font info for 14 fonts, out of 3000000 for 5000
- 714 hyphenation exceptions out of 8191
- 10i,0n,7p,46b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
-./paper-master.tex:2:  ==> Fatal error occurred, no output PDF file produced!
+ 5761 strings out of 95340
+ 74332 string characters out of 1183922
+ 235119 words of memory out of 1500000
+ 8888 multiletter control sequences out of 110000
+ 11281 words of font info for 40 fonts, out of 1200000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 43i,15n,67p,1045b,2627s stack positions out of 5000i,500n,10000p,200000b,5000s
+<C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx
+10.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx12.pfb><C
+:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx8.pfb><C:/Archivos
+ de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmbx9.pfb><C:/Archivos de progra
+ma/MiKTeX 2.7/fonts/type1/bluesky/cm/cmitt10.pfb><C:/Archivos de programa/MiKTe
+X 2.7/fonts/type1/bluesky/cm/cmmi10.pfb><C:/Archivos de programa/MiKTeX 2.7/fon
+ts/type1/bluesky/cm/cmmi7.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/b
+luesky/cm/cmmi9.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/
+cmr10.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr17.pfb>
+<C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr6.pfb><C:/Archivo
+s de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr7.pfb><C:/Archivos de progra
+ma/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr8.pfb><C:/Archivos de programa/MiKTeX 2
+.7/fonts/type1/bluesky/cm/cmr9.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/ty
+pe1/bluesky/cm/cmsl10.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/blues
+ky/cm/cmss9.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy
+10.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy7.pfb><C:
+/Archivos de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmsy9.pfb><C:/Archivos 
+de programa/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti10.pfb><C:/Archivos de progra
+ma/MiKTeX 2.7/fonts/type1/bluesky/cm/cmti7.pfb><C:/Archivos de programa/MiKTeX 
+2.7/fonts/type1/bluesky/cm/cmtt10.pfb><C:/Archivos de programa/MiKTeX 2.7/fonts
+/type1/bluesky/cm/cmtt9.pfb>
+Output written on paper-master.pdf (17 pages, 979801 bytes).
+PDF statistics:
+ 152 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+
