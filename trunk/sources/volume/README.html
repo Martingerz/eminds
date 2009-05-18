@@ -1,0 +1,202 @@
+<p><h1 id="instrucciones_para_la_compilacin_de_volmenes_de_e_minds">Instrucciones para la compilación de volúmenes de e-Minds</h1>
+
+<h2 id="introduccin">Introducción</h2>
+
+<p>Este documento presenta una guía la preparación y compilación de los volúmenes de <a href="http://www.eminds.hci-rg.com/index.php?journal=eminds">e-Minds</a>. El sistema presenta las siguientes características:</p>
+
+<ul>
+<li>Se disponen de scripts para la automatización de la construcción del volumen.</li>
+<li>Los fuentes y los artefactos generados durante la construcción están totalmente separados.</li>
+</ul>
+
+<h2 id="entorno_necesario">Entorno necesario</h2>
+
+<p>Para compilar el volumen de e-minds es necesario tener instalado:</p>
+
+<ul>
+<li>Una distribución de LaTeX actual.</li>
+<li>Tener disponible una instalación de Ruby que disponga de <a href="http://rake.rubyforge.org/">Rake</a>. Aquí hay <a href="http://www.ruby-lang.org/es/downloads/">instrucciones sobre como instalar ruby en diferentes sitemas operativos</a>.</li>
+</ul>
+
+<h2 id="cdigo_fuente">Código fuente</h2>
+
+<p>El código fuente de <a href="http://code.google.com/p/eminds/source/checkout">e-Minds se encuentra disponible en google code</a>. Para acceder a él se necesita un cliente de Subversion.</p>
+
+<h2 id="estructura_de_carpetas_y_archivos">Estructura de carpetas y archivos</h2>
+
+<p>A continuación se explica la estructura de carpetas y archivos esenciales del sistema</p>
+
+<pre><code>/sources
+    /instructions
+        /core
+            /images
+        /files
+    /volume
+        /core
+        /specific
+/lib
+/build
+/output
+</code></pre>
+
+<h3 id="carpeta_sources_instructions">Carpeta <code>sources/instructions</code></h3>
+
+<p>Esta carpeta contiene el código fuente del sistema. Se divide en las carpetas:</p>
+
+<ul>
+<li>La carpeta <code>core</code>: contiene las fuentes de la revista. Las instructions en sí mismas están contenidas en el archivo <code>paper.tex</code>. También contiene una subcarpeta <code>images</code> con imágenes utilizadas para la preparación de las instructions.</li>
+<li>La carpeta <code>files</code>: contiene archivos que serán incluidos junto con las instructions, en el paquete entregable final.</li>
+</ul>
+
+<p>Nótese que aunque las instrucciones para el autor hacen uso de la clase LaTeX del paper de e-Minds, el fuente original de la clase se encuentra en la carpeta <code>volume/core/emindspaper.cls</code>. Este archivo será copiado junto con los fuentes de las instrucciones automáticamente por los scripts.</p>
+
+<h3 id="carpeta_sources_volume_core">Carpeta <code>sources/volume/core</code></h3>
+
+<p>Esta carpeta contiene las fuentes del sistema LaTeX del volumen. No contiene los archivos específicos de los papers que se incluyen en una compilación concreta, ni la publicidad, que irán en la carpeta <code>sources/volume/specific</code>.</p>
+
+<p>Esta carpeta contiene las dos clases LaTeX esenciales del sistema de e-Minds.</p>
+
+<ul>
+<li>La clase <code>emindspaper.cls</code>. Define el formato de un artículo de e-Minds, así como los comandos disponiles por los autores de los mismos.</li>
+<li>La clase <code>emindsvolume.cls</code>. Extiende la clase <code>emindspaper.cls</code> con comandos específicos para la preparación del volumen.</li>
+</ul>
+
+<p>La estructura de archivos se encuentra dividida en múltiples de forma modular, con el objetivo de facilitar el mantenimiento de los mismos. Estos archivos se van incluyendo unos a otros comenzando por el archivo <code>volume-master.tex</code>, que es archivo LaTeX maestro del volumen. A continuación se describen brevemente estos archivos:</p>
+
+<ul>
+<li><p><code>volume-packages.tex</code>. Paquetes LaTeX específicos para el volumen.</p></li>
+<li><p><code>paper-packages.tex</code>. Paquetes LaTeX de los papers. </p></li>
+<li><p><code>volume-data.tex</code>. Definición de variables a utilizar en el volumen. Aspectos tales como el ISBN de la revista, o los miembros que componen el equipo de e-Minds se definen aquí.</p></li>
+<li><p><code>volume-primer.tex</code>. Este archivo contiene la definición del preámbulo del volumen. Contiene referencias a diferentes archivos que contienen los contenidos de dicho preámbulo.</p>
+
+<ul>
+<li><p><code>volume-firspage.tex</code>. La portada del volumen que aparece como primera página del mismo.</p></li>
+<li><p><code>volume-cover.tex</code>. La portada del volumen.</p></li>
+<li><p><code>volume-datapage.tex</code>. La página que incluye información oficial de la compilación, tal como el número de volumen o el ISSN. </p>
+
+<ul>
+<li><code>volume-copyrigth.tex</code>. La declaración de copyright.</li>
+</ul></li>
+<li><p><code>volume-editorial.tex</code>. El editorial del número.</p></li>
+<li><p><code>volume-editor-board.tex</code>. La página con el comité de revisores de e-Minds. Este archivo incluye el contenido efectivo de dicho comité en el archivo <code>volume-scientific-panel</code> generado automáticamente por el sistema Web de e-Minds.</p></li>
+</ul></li>
+<li><p><code>volume-papers.tex</code>. Este archivo incluye referencias a los papers específicos a un número concreto de e-Minds. Los contenidos a incluir se obtendrán típicamente de la carpeta <code>sources/volume/specific</code>.</p></li>
+</ul>
+
+<h3 id="carpeta_sources_volume_specific">Carpeta <code>sources/volume/specific</code></h3>
+
+<p>Contiene los archivos que son específicos a la compilación de un número concreto de e-Minds. Se divide a su vez en tres subcarpetas:</p>
+
+<ul>
+<li><p><code>Adverts</code>: contiene los archivos relativos a la publicidad de la revista.</p></li>
+<li><p><code>Logos</code>: contiene los logos de e-Minds y del HCI-RG, así como el logo de la portada del número concreto.</p></li>
+<li><p><code>Papers</code>: contiene los artículos del número. Cada artículo va contenido en una carpeta. Se recomienza nombrar estas carpetas con el número asignado a los papers por el sistema de Journal Manager utilizado por e-Minds.</p></li>
+</ul>
+
+<h3 id="carpeta_build">Carpeta <code>build</code></h3>
+
+<p>Esta carpeta es generada automáticamente por los scripts de e-Minds para preparar los archivos necesarios para la creación de los artefactos a partir de los procesos de compilación correspondientes.</p>
+
+<h3 id="carpeta_output">Carpeta <code>output</code></h3>
+
+<p>Esta carpeta contendrá los entregables generados por los scripts:</p>
+
+<ul>
+<li>La carpeta <code>instructions</code> contendrá el archivo ZIP que contiene las instructions.</li>
+<li>La carpeta <code>volume</code> contendrá el PDF generado con el número del volumen, así como un ZIP con los archivos fuentes necesarios.</li>
+</ul>
+
+<p>La nomenclatura de los artefactos generados hace uso de los datos relativos al volumen que son extraídos automáticamente del archivo <code>volume-data.tex</code> por los scripts de compilación.</p>
+
+<h3 id="carpeta_lib">Carpeta <code>lib</code></h3>
+
+<p>Librerías de apoyo a los scripts. Actualmente contiene el código necesario para analizar el archivo <code>volume-data.tex</code> y extraer la información necesaria para el nombrado adecuado de entregables.</p>
+
+<h2 id="preparacin_de_entregables">Preparación de entregables</h2>
+
+<p>Para la generación de los artefactos de e-Minds se recomienda hacer uso de los scripts Rake de los que se dispone. Utilizando estos scripts:</p>
+
+<ul>
+<li>Se puede tener totalmente separadas las fuentes de los entregables.</li>
+<li>No será necesario duplicar archivos cuándo éstos sean necesarios por varios entregables.</li>
+<li>Se evitarán errores derivados de la realización manual de tareas repetitivas.</li>
+</ul>
+
+<p>El sistema rake incluye un sistema de ayuda para saber de qué tareas se dispone y una breve descripción de las mismas. Si se invoca en línea de comandos <code>rake -t</code> en la raíz del volumen:</p>
+
+<pre><code>&gt; rake -T
+
+rake clean                  # Remove any temporary products.
+rake clobber                # Remove any generated file.
+rake instructions:build     # Invoke latex compilation commands in order to...
+rake instructions:generate  # Generate the directory containing the instruc...
+rake instructions:prepare   # Prepare the instructions build directory
+rake volume:build           # Invoke latex compilation commands in order to...
+rake volume:generate        # Generate the volume final PDF file
+rake volume:prepare         # Prepare the volume build directory
+</code></pre>
+
+<p>Las fuentes del sistema de scripts Rake comprenden un fichero <code>Rakefile</code> que se encuentra en la raíz del volumen y un conjunto de archivos <code>Rakefile.rb</code> distribuidos en las respectivas fuentes de las instructions y del volumen.</p>
+
+<p>Los comandos <code>clean</code> y <code>clobber</code> son genéricos de Rake. El primero elimina los archivos temporales generados durante la construcción (carpeta <code>build</code>) y el segundo borra tanto los archivos temporales como los entregables (carpetas <code>build</code> y <code>output</code>).</p>
+
+<p>Los siguientes comandos son los relativos a la compilación de las instrucciones y del volumen. Los espacios de nombres <code>instructions</code> y <code>volume</code> definen para qué artefacto se realizan las siguientes acciones:</p>
+
+<ul>
+<li><code>prepare</code>. Copia los fuentes necesarios en la carpeta <code>build</code> (el destino será la subcarpeta <code>build/instructions</code> o <code>build/volume</code> dependiendo del caso).</li>
+<li><code>build</code>. Ejecuta los comandos de construcción LaTeX.</li>
+<li><code>generate</code>. Genera los entregables correspondientes.</li>
+</ul>
+
+<p>Unas tareas dependen de otras de tal forma que si se invoca una tarea se invocan las dependientes. En concreto: <code>generate =&gt; build =&gt; prepare</code>.</p>
+
+<h3 id="preparacin_de_las_instructions_for_authors">Preparación de las <em>Instructions for authors</em></h3>
+
+<p>Para modificar el contenido de las instrucciones se modificará el archivo <code>sources/instructions/core/paper.tex</code>.</p>
+
+<p>Para generar las instrucciones se invocará el comando:</p>
+
+<pre><code>&gt; rake instructions:generate
+</code></pre>
+
+<p>Una vez generado el archivo ZIP correspondiente se encontrará en la carpeta <code>output/instructions</code>.</p>
+
+<h3 id="preparacin_del_volumen">Preparación del volumen</h3>
+
+<p>Para la preparación del volumen conviene tener clara la estructura de archivos descrita en la sección anterior.</p>
+
+<p>En primer lugar, habrá que modificar los archivos que contienen aspectos específicos del volumen, dentro de la carpeta <code>sources/volume/core</code>. Los archivos más relevantes para cada número son:</p>
+
+<ul>
+<li>Los datos del volumen en <code>volume-datapage.tex</code>.</li>
+<li>El panel editorial en <code>volume-scientific-panel.tex</code>.</li>
+<li>El editorial del número en <code>volume-editorial.tex</code>.</li>
+<li>Así mismo, hay que actualizar el logo de la portada del número que se encuentra en el archivo <code>sources/volume/secific/Logos</code>.</li>
+</ul>
+
+<p>En segundo lugar, hay que preparar la página que contiene la estructura esencial de contenidos del volumen. Esta labor se realiza modificando el archivo <code>volume-papers.tex</code>.</p>
+
+<p>Para incluir papers en el volumen se utilizará el comando <code>\inputpaper{carpeta del paper}</code>. Por ejemplo:</p>
+
+<pre><code>\inputPaper{Papers/58}
+</code></pre>
+
+<p>Este comando incluye el paper contenido del artículo en el directorio <code>58</code> de la carpeta <code>sources/volume/specific/Papers/</code>.</p>
+
+<p>Para la publicidad, se hará uso del parámetro opcional del comando <code>\inputpaper[ruta al archivo de publicidad]{carpeta del paper}</code>. Por ejemplo:</p>
+
+<pre><code>\inputPaper[Adverts/PCTI.pdf]{Papers/58}
+</code></pre>
+
+<p>Al igual que el anterior, este comando incluye el paper 58 y, además, inserta <strong>antes</strong> el archivo de publicidad <code>PCTI.pdf</code> que se encuentra en la carpeta <code>sources/volume/specific/Averts/</code>.</p>
+
+<p>Para la preparación del volumen se recomienda ir incluyendo y compilando los papers uno a uno, para ir detectando posibles problemas de forma incremental. Durante esta compilación incremental, se puede ir haciendo uso del comando:</p>
+
+<pre><code>&gt; rake volume:build
+</code></pre>
+
+<p>Para la generación de los entregables del volumen (PDF final y ZIP con los fuentes) se hará uso del comando:</p>
+
+<pre><code>&gt; rake volume:generate
+</code></pre>
+</p>
