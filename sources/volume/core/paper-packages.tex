@@ -1,20 +1,12 @@
 \usepackage{url}
 \usepackage{listings}
-
-% P07
-\usepackage{booktabs}
-\usepackage{tabularx}
-\usepackage{graphicx}
-
-\newcommand{\ind}[5]{\begin{description}
-\item[Indicator] #1 \newline
-(criterion: #2)\vspace*{-1.4ex} %, level: #3
-\item[Description] #4 \newline #5
-\end{description}}
-
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage{multirow}
 %------------------------------------------------------------------------------------
 
-\lstset{basicstyle=\small, identifierstyle=\ttfamily, commentstyle=\ttfamily\itshape, keywordstyle=\sffamily\color{blue}, emphstyle=\ttfamily\color{blue}\underbar, numbers=none, numberstyle=\tiny, tabsize=2, extendedchars=true, frame=tb, framerule=0.4pt, framexleftmargin=5mm, xleftmargin=10mm, xrightmargin=5mm, breaklines=true, breakautoindent=true, columns=fullflexible, language=[LaTeX]TeX, morekeywords={\setAuthor, \setInstitute, \maketitle, \url, \email, \maketitle, \section, \subsection, \subsubsection, \paragraph, \subparagraph, \title, \includegraphics, \ref, \caption}}
+\lstset{basicstyle=\small, identifierstyle=\ttfamily, commentstyle=\ttfamily\itshape, keywordstyle=\sffamily\color{blue}, emphstyle=\ttfamily\color{blue}\underbar, numbers=none, numberstyle=\tiny, tabsize=2, extendedchars=true, frame=tb, framerule=0.4pt, framexleftmargin=5mm, xleftmargin=10mm, xrightmargin=5mm, breaklines=true, breakautoindent=true, columns=fullflexible, language=[LaTeX]TeX, morekeywords={\setAuthor, \setInstitute, \maketitle, \url, \email, \maketitle, \section, \subsection, \subsubsection, \paragraph, \subparagraph, \title, \includegraphics, \ref, \caption, \authorentry}}
 
 \lstnewenvironment{latexCode}[1][]{
 \lstset{#1}}
