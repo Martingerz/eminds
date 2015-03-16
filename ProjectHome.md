@@ -1,0 +1,1 @@
+Latex template to give format to the author contributions to eMinds (International Journal on Human-Computer Interaction) www.eminds.hci-rg.com
